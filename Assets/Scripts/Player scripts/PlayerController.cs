@@ -1,0 +1,26 @@
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    public float moveSpeed = 5f;
+
+    private InputActions _input;
+    private Rigidbody2D _rigidbody2D;
+    
+    void Start()
+    {
+        _input = GetComponent<InputActions>();
+        _rigidbody2D = GetComponent<Rigidbody2D>();
+    }
+    
+    void Update()
+    {
+        
+    }
+
+    void FixedUpdate()
+    {
+        _rigidbody2D.linearVelocityX = _input.Horizontal * moveSpeed;
+        _rigidbody2D.linearVelocityY = _input.Vertical * moveSpeed;
+    }
+}
