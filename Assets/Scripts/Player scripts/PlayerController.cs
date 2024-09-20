@@ -15,7 +15,10 @@ public class PlayerController : MonoBehaviour
     
     void Update()
     {
-        
+        if (_input.Horizontal != 0)
+        {
+            transform.localScale = new Vector2(Mathf.Sign(_input.Horizontal), 1);
+        }
     }
 
     void FixedUpdate()
