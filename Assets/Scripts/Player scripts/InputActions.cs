@@ -12,6 +12,7 @@ public class InputActions : MonoBehaviour
     {
         Horizontal = _inputSystem.Player.Move.ReadValue<Vector2>().x;
         Vertical = _inputSystem.Player.Move.ReadValue<Vector2>().y;
+        Interact = _inputSystem.Player.Interact.WasPressedThisFrame();
     }
 
     void Awake()
