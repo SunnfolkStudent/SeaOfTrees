@@ -1,8 +1,10 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class DialogueManager : MonoBehaviour
 {
-    public string dialogue;
+    public Queue sentences;
     void Start()
     {
         
